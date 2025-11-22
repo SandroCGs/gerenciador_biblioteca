@@ -6,11 +6,11 @@ switch ($route) {
         //! controller chamando emprestimo
         break;
 
-    case "cadastroItem":
+    case "cadastroLivro":
         //! controller
         break;
 
-    case "excluiItem":
+    case "excluiLivro":
 
         break;
 
@@ -29,8 +29,23 @@ switch ($route) {
         
         break;
     
-    case "devolveItem":
+    case "devolveLivro":
 
+        break;
+
+    case "listarLivro":
+        require_once "app/controllers/LivroController.php";
+        $livroController = new LivroController(); 
+        break;
+    
+    case "listarUsuarios":
+        break;
+
+    case "pesquisarUsuario":
+        break;
+    
+    case "pesquisarLivro":
+    
         break;
 
     default:
