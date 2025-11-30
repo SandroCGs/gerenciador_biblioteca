@@ -36,6 +36,7 @@ switch ($route) {
     case "listarLivro":
         require_once "app/controllers/LivroController.php";
         $livroController = new LivroController(); 
+        $livroController->listar();
         break;
     
     case "listarUsuarios":
