@@ -7,7 +7,11 @@ switch ($route) {
         break;
 
     case "cadastroLivro":
-        //! controller
+        require_once "app/config/Conexao.php";
+        require_once "app/models/LivroModel.php";
+        require_once "app/controllers/LivroController.php";
+        $livroController = new LivroController(); 
+        $livroController->cadastrar();
         break;
 
     case "excluiLivro":
@@ -34,6 +38,8 @@ switch ($route) {
         break;
 
     case "listarLivro":
+        require_once "app/config/Conexao.php";
+        require_once "app/models/LivroModel.php";
         require_once "app/controllers/LivroController.php";
         $livroController = new LivroController(); 
         $livroController->listar();
