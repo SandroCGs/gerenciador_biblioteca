@@ -1,23 +1,41 @@
 <?php
 $route = $_GET['route'] ?? 'home';
 
+require_once "app/config/Conexao.php";
+require_once "app/models/LivroModel.php";
+require_once "app/controllers/LivroController.php";
+
+$controller = new LivroController();
+
 switch ($route) {
-    case "emprestimo":
-        //! controller chamando emprestimo
+    
+    case "loginFuncionario":
+        
         break;
 
-    case "cadastroLivro":
-        require_once "app/config/Conexao.php";
-        require_once "app/models/LivroModel.php";
-        require_once "app/controllers/LivroController.php";
-        $livroController = new LivroController(); 
-        $livroController->cadastrar();
+    case "listarLivro":
+        $controller->listar();
         break;
 
-    case "excluiLivro":
-
+    case "cadastrarLivro":
+        $controller->cadastrar();
         break;
 
+    case "editarLivro":
+        $controller->editar();
+        break;
+
+    case "excluirLivro":
+        $controller->excluir();
+        break;
+
+    case "pesquisarLivro":
+        $controller->pesquisar();
+        break;
+
+    
+
+    
     case "cadastroUsuario":
         break;
     
@@ -29,33 +47,24 @@ switch ($route) {
         
         break;
 
-    case "loginFuncionario":
-        
-        break;
-    
-    case "devolveLivro":
-
-        break;
-
-    case "listarLivro":
-        require_once "app/config/Conexao.php";
-        require_once "app/models/LivroModel.php";
-        require_once "app/controllers/LivroController.php";
-        $livroController = new LivroController(); 
-        $livroController->listar();
-        break;
-    
     case "listarUsuarios":
         break;
 
     case "pesquisarUsuario":
         break;
     
-    case "pesquisarLivro":
     
+
+
+    case "emprestimo":
+        //! controller chamando emprestimo
+        break;
+    
+    case "devolveLivro":
+
         break;
 
     default:
-        //home
+        echo "<a href='?route=listarLivro'>Livros</a>";
         break;
 }

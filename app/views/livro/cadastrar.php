@@ -1,9 +1,14 @@
-<form action="/gerenciador_biblioteca/?route=cadastroLivro" method="POST">
-  <label for="fname">Título:</label><br>
-  <input type="text" id="titulo" name="titulo"><br>
-  <label for="autor">Autor:</label><br>
-  <input type="text" id="autor" name="autor">
-  <label for="ano">Ano:</label><br>
-  <input type="text" id="ano" name="ano">
-  <button type="submit">Cadastrar</button>
-</form>
+<link rel="stylesheet" href="public/css/style.css">
+
+<div class="container">
+
+    <h2>Cadastrar Livro</h2>
+
+    <form method="POST">
+        <input name="titulo" placeholder="Título"><br>
+        <input name="autor" placeholder="Autor"><br>
+        <input name="ano" placeholder="Ano"><br>
+        <button type="submit">Salvar</button>
+    </form>
+
+</div>
