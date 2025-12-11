@@ -1,33 +1,95 @@
-body {
-    font-family: Arial;
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Página */
+body {
     background: #f2f2f2;
 }
 
+/* Container geral */
 .container {
-    width: 600px;
-    margin: 30px auto;
+    max-width: 800px;
+    margin: auto;
     background: #fff;
-    padding: 20px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h2, h3 {
+    margin-bottom: 15px;
+}
+
+/* Links do topo */
+.top-links {
+    margin-bottom: 20px;
+}
+
+.top-links a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.top-links a:hover {
+    text-decoration: underline;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="search"],
+input:not([type]),
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 6px;
+    width: 100%;
 }
 
-h2 {
-    margin-top: 0;
+/* Botões */
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #0066cc;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-a {
+button:hover {
+    background: #004e9a;
+}
+
+/* Listagem */
+.item {
+    background: #fafafa;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #e3e3e3;
+}
+
+.item a {
+    margin-left: 10px;
+    text-decoration: none;
     color: #0066cc;
 }
 
-form input, form button {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    margin: 8px 0;
-}
-
-button {
-    cursor: pointer;
+.item a:hover {
+    text-decoration: underline;
 }
